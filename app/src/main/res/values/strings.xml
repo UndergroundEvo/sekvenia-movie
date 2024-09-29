@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Movies</string>
+    <string name="http_error">Server error</string>
+    <string name="io_error">No connection</string>
+    <string name="loading_word">Loading</string>
+    <string name="movies_word">Movies</string>
+    <string name="screen_network_error">Network connection error</string>
+    <string name="retry_word">Retry</string>
+    <string name="genres_word">Genres</string>
+    <string name="year_word">year</string>
+    <string name="kinopoisk">Kinopoisk</string>
+    <string name="error_image">Error loading image</string>
 </resources>
