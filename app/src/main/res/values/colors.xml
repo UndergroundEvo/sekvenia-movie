@@ -7,4 +7,26 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="main_color">#FF0E3165</color>
+    <color name="accent_color">#FFFFC967</color>
+
+
+    <!-- Светлая тема -->
+    <color name="primary_color_light">#FFFFFF</color>
+    <color name="secondary_color_light">#FFFFFF</color>
+    <color name="background_color_light">#FFFBFE</color>
+    <color name="surface_color_light">#FF0E3165</color>
+    <color name="on_primary_color_light">#FFFFFF</color>
+    <color name="on_surface_color_light">#FFFBFE</color>
+
+    <!-- Тёмная тема -->
+    <color name="primary_color_dark">#FFBB86FC</color>
+    <color name="secondary_color_dark">#FF6200EE</color>
+    <color name="background_color_dark">#121212</color>
+    <color name="surface_color_dark">#3700B3</color>
+    <color name="on_primary_color_dark">#000000</color>
+    <color name="on_surface_color_dark">#FFFFFF</color>
+
+
 </resources>

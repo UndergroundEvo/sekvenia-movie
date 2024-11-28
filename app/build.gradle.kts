@@ -51,12 +51,36 @@ android {
 }
 
 dependencies {
+    // тут в процессе разработки появились лишние библы
 
+    // для асинхронной загрузки изображений
+    implementation(libs.coil.compose)
+
+    // di
     implementation(project.dependencies.platform("io.insert-koin:koin-bom:4.0.0"))
+    implementation(libs.insert.koin.koin.android)
     implementation(libs.insert.koin.koin.core)
 
-    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.koin.androidx.compose)
+    implementation(libs.koin.compose)
+    implementation(libs.koin.compose.viewmodel)
+    implementation(libs.koin.compose.viewmodel.navigation)
 
+    //для потенциальной Type-safety навигации
+    //implementation(libs.kotlinx.serialization.json)
+
+    //фрагментики
+    implementation (libs.androidx.fragment.compose)
+
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
+    implementation(libs.androidx.fragment.compose)
+    implementation (libs.androidx.fragment.ktx)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.constraintlayout.compose)
+
+    // сетевое взаимодействие
     implementation(libs.retrofit2.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.okhttp)

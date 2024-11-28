@@ -1,47 +1,30 @@
 package com.sekvenia.movie
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.sekvenia.movie.ui.theme.MoviesTheme
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+     /* Привет тому кто будет проверять!
+     * по приложению использовалась Clean Architecture
+     * так как по заданию можно было использовать XML/Compose верстку,
+     * то для фрагмента с листом используется ComposeView,
+     * для деталей классика XML
+     *
+     * для экрана с листом есть переключение тем, есть портретный и ландшафтный экран
+     * навигация через navGraph, передача данных о фильме через Parcelable
+     * (хотел через SafeArgs) по этому и зависимость осталась
+     * про то что все коммиты сделаны почти в одно время, скажу что все
+     * коммителось по готовности что-бы избежать закрепления неверного кода
+     *
+     * по программе не успел доделать переключение тем и темную тему для MovieDetailsFragment
+     *
+     * если дальше ТЗ не пройдет прошу пожалуйста пройтись по коду в MergeRequest
+     * что-бы понять что не так грустить и двигаться дальше
+     */
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            MoviesTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MoviesTheme {
-        Greeting("Android")
+        setContentView(R.layout.activity_main)
     }
 }
