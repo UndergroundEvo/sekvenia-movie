@@ -1,13 +1,14 @@
 package com.sekvenia.movie.di
 
-import com.sekvenia.movie.common.Constans
-import com.sekvenia.movie.data.models.FilmDto
+import androidx.lifecycle.SavedStateHandle
+import com.github.terrakok.cicerone.Cicerone
+import com.github.terrakok.cicerone.Router
+import com.sekvenia.movie.common.Constants
 import com.sekvenia.movie.data.network.CinemaApi
 import com.sekvenia.movie.data.repository.CinemaRepositoryImpl
 import com.sekvenia.movie.domain.repository.CinemaRepository
 import com.sekvenia.movie.domain.usecase.GetFilmsUseCase
-import com.sekvenia.movie.presentation.viewmodel.DetailViewModel
-import com.sekvenia.movie.presentation.viewmodel.MovieViewModel
+import com.sekvenia.movie.presentation.viewmodel.MovieListViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -16,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 val networkModule = module {
     single {
         Retrofit.Builder()
-            .baseUrl(Constans.BASE_URL)
+            .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CinemaApi::class.java)
@@ -29,6 +30,13 @@ val useCaseModule = module {
     single { GetFilmsUseCase(get()) }
 }
 val viewModelModule = module {
-    viewModel { MovieViewModel(get()) }
-    viewModel { (filmDto: FilmDto) -> DetailViewModel(filmDto) }
+    viewModel { (handle: SavedStateHandle) ->
+        MovieListViewModel(getFilmsUseCase = get(), savedStateHandle = handle)
+    }
+}
+
+val navigationModule = module {
+    single { Router() }
+    single { Cicerone.create(get<Router>()) }
+    single { get<Cicerone<Router>>().getNavigatorHolder() }
 }
