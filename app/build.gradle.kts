@@ -8,6 +8,11 @@ android {
     namespace = "com.sekvenia.movie"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.sekvenia.movie"
         minSdk = 26
@@ -51,40 +56,30 @@ android {
 }
 
 dependencies {
-    // тут в процессе разработки появились лишние библы
-
-    // для асинхронной загрузки изображений
-    implementation(libs.coil.compose)
-
     // di
     implementation(project.dependencies.platform("io.insert-koin:koin-bom:4.0.0"))
     implementation(libs.insert.koin.koin.android)
     implementation(libs.insert.koin.koin.core)
-
     implementation(libs.koin.androidx.compose)
     implementation(libs.koin.compose)
     implementation(libs.koin.compose.viewmodel)
     implementation(libs.koin.compose.viewmodel.navigation)
 
-    //для потенциальной Type-safety навигации
-    //implementation(libs.kotlinx.serialization.json)
-
-    //фрагментики
+    // навигация
+    implementation(libs.cicerone)
     implementation (libs.androidx.fragment.compose)
-
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    implementation(libs.androidx.fragment.compose)
+    // Фрагменты .ktx
     implementation (libs.androidx.fragment.ktx)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.constraintlayout.compose)
 
-    // сетевое взаимодействие
+    // Работа с сетью
     implementation(libs.retrofit2.retrofit)
     implementation(libs.converter.gson)
-    implementation(libs.okhttp)
-    implementation(libs.logging.interceptor)
+
+    // для асинхронной загрузки изображений
+    implementation(libs.coil.compose)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
