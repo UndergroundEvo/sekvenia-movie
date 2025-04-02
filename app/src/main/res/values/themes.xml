@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="Theme.Movies.DetailsMovieTitle" parent="">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 
+    <style name="Theme.Movies.DetailsMovieGenreYear" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/genre_year_color</item>
+    </style>
+
+    <style name="Theme.Movies.DetailsMovieDescription" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.Movies.DetailsMovieImageRound" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
 
     <style name="Theme.Movies" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary_color_light</item>
         <item name="colorOnPrimary">@color/on_primary_color_light</item>
         <item name="colorSurface">@color/surface_color_light</item>
         <item name="colorOnSurface">@color/on_surface_color_light</item>
+        <item name="android:statusBarColor">@color/status_bar_color</item>
     </style>
 
-    <style name="DarkTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <!--<style name="DarkTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary_color_dark</item>
         <item name="colorOnPrimary">@color/on_primary_color_dark</item>
         <item name="colorSurface">@color/surface_color_dark</item>
         <item name="colorOnSurface">@color/on_surface_color_dark</item>
-    </style>
+    </style>-->
     
 </resources>

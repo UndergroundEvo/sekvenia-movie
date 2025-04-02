@@ -9,6 +9,8 @@
     <string name="retry_word">ПОВТОРИТЬ</string>
     <string name="genres_word">Жанры</string>
     <string name="year_word">год</string>
-    <string name="kinopoisk">Кинопоиск</string>
+    <string name="kinopoisk">КиноПоиск</string>
     <string name="error_image">Ошибка загрузки изображения</string>
+    <string name="movie_image_description">Обложка фильма</string>
+    <string name="no_rating">Нет рейтинга</string>
 </resources>

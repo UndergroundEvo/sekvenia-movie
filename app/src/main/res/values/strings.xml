@@ -10,4 +10,6 @@
     <string name="year_word">year</string>
     <string name="kinopoisk">Kinopoisk</string>
     <string name="error_image">Error loading image</string>
+    <string name="movie_image_description">Movie cover</string>
+    <string name="no_rating">Not Rated</string>
 </resources>

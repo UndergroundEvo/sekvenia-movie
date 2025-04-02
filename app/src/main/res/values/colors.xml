@@ -20,6 +20,7 @@
     <color name="on_primary_color_light">#FFFFFF</color>
     <color name="on_surface_color_light">#FFFBFE</color>
 
+
     <!-- Тёмная тема -->
     <color name="primary_color_dark">#FFBB86FC</color>
     <color name="secondary_color_dark">#FF6200EE</color>
@@ -27,6 +28,11 @@
     <color name="surface_color_dark">#3700B3</color>
     <color name="on_primary_color_dark">#000000</color>
     <color name="on_surface_color_dark">#FFFFFF</color>
+
+    <color name="background_color">#FFFFFF</color>
+    <color name="status_bar_color">#0E3165</color>
+    <color name="genre_year_color">#4B4B4B</color>
+
 
 
 </resources>
