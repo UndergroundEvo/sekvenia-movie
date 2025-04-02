@@ -1,6 +1,7 @@
 package com.sekvenia.movie
 
 import android.app.Application
+import com.sekvenia.movie.di.navigationModule
 import com.sekvenia.movie.di.networkModule
 import com.sekvenia.movie.di.repositoryModule
 import com.sekvenia.movie.di.useCaseModule
@@ -19,7 +20,8 @@ class MoviesApp : Application() {
                 networkModule,
                 repositoryModule,
                 useCaseModule,
-                viewModelModule
+                viewModelModule,
+                navigationModule
             )
         }
     }
