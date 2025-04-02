@@ -46,7 +46,7 @@ fun MovieList(
 
     LaunchedEffect(selectedGenre) { viewModel.setFilters(selectedGenre) }
 
-    LazyColumn(Modifier.fillMaxSize()) {
+    LazyColumn(Modifier.fillMaxSize().padding(bottom = 8.dp)) {
         item {
             HeaderText(
                 stringResource(R.string.genres_word),
@@ -79,7 +79,7 @@ fun MovieList(
         items(filteredMovies.chunked(2)) { items ->
             Row(
                 modifier = Modifier
-                    .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp),
+                    .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 for ((index, item) in items.withIndex()) {
